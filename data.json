@@ -457,7 +457,7 @@ const data = {
 		}
 	},
 	"unlockInviteClass": {
-		"Aither": [180, "Prometheus+: 10TiB Upload, minimum ratio 1.0, average seedtime 1 month, 6 months membership"],
+		"Aither": [240, "Prometheus+: 10TiB Upload, minimum ratio 1.0, average seedtime 1 month, 8 months membership"],
 		"AlphaRatio": [182, "Sphinx+: 3.2TB upload, 1.44m BP, 26 weeks"],
 		"AnimeBytes": [14, "PU+: 2 weeks, upload 25GB, 10 torrents, ratio>0.7"],
 		"Anthelion": [30, "PU+: 5 uploads and/or 10 adoptions, 1TiB upload, ratio>1, 25k BP, 1 month"],
@@ -468,6 +468,7 @@ const data = {
 		"BroadcasTheNet": [28, "PU+: 4 weeks, 250GB upload/download, 250 snatches (upload/download), 250,000 bonus points"],
 		"Cathode-Ray Tube": [112, "Analog Ace: 16 weeks, 5 TiB upload, 5 uploads, 20 forum posts, ratio 1.5"],
 		"Cinemageddon": [14, "Superfan: 200GB upload, 20GB download, ratio>1.5"],
+		"Dolphin Is Coming": [14, "PU: 2 weeks, 5 torrents, 25GB upload, ratio>=1.05"],
 		"Empornium": [56, "Great Perv+: 8 weeks, 100 GB upload, 5 torrents, ratio>1.05 or Sextreme Perv+: 13 weeks, 1 TB upload, 50 torrents, ratio>1.05"],
 		"FearNoPeer": [90, "20TiB Upload and account 3 months old"],
 		"FileList": [180, "Elite+: 4 years, 4TB upload and ratio>5,00 or VIP: 3000 FLCoins"],
@@ -476,7 +477,7 @@ const data = {
 		"HD-Torrents": [0, "HD Monster+: 250GB upload, ratio>2"],
 		"HDBits": [365, "1080i+ & 1 year+; 1080i+: 4 weeks, 30GB download, ratio>0.95"],
 		"iAnon": [14, "Power User: 2 weeks, 25GB upload, 5 torrents, ratio>1.05"],
-		"JPopsuki": [0, "No requiremen"],
+		"JPopsuki": [0, "No requirement"],
 		"LST": [120, "Whale: 4 months, 25TB Upload or Seed Size >=6TB, seed time average of >=30 days"],
 		"LzTr": [14, "PU+: 2 weeks, 5 torrents, 25GB upload, ratio>1.05"],
 		"MoreThanTV": [56, "Camera operator+: 500GB upload, 8 weeks"],
@@ -491,8 +492,10 @@ const data = {
 		"Secret Cinema": [60, "Cinematographer+: 2 months, in the 50th overall percentile/95th seeding percentile"],
 		"TeamHD": [0, "Awaiting someone to add"],
 		"TheGeeks": [0, "No requirement"],
+		"TorrentBD": [180, "Elite: 6 months, 10TiB upload, 30 torrents, avg seed time >= 10 days"],
 		"TV-Vault": [182, "Elite: Registered for >= 26 weeks, downloaded >1B, uploaded >= 100GB, uploaded >= 20 torrents, ratio >= 1.25."],
-		"UHDBits": [56, "Extreme+: 8 weeks, 300GB download, 60 snatches, ratio>2, seed/leech ratio>20"]
+		"UHDBits": [56, "Extreme+: 8 weeks, 300GB download, 60 snatches, ratio>2, seed/leech ratio>20"],
+		"Upload.cx": [14, "PU: 2 weeks, 3TiB upload, ratio>=1"]
 	},
 	"abbrList": {
 		"ABTorrents": "ABT",
