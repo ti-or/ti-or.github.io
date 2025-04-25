@@ -51,16 +51,17 @@ const data = {
 			"UHDBits": [0, "No requirement", "Nov 2024"]
 		},
 		"Anthelion": {
-			"Aither": [120, "PU+", "Dec 2024"],
-			"BakaBT": [0, "3 months, ratio>1.0", "Dec 2024"],
-			"Cathode-Ray.Tube": [90, "3 months, ratio>1.0", "Dec 2024"],
-			"CinemaZ": [180, "Fanatic+, 50 uploads or 75 adoptions + 5 uploads, 1TB uploaded, 6 months, ratio>1.1, ANT activity proof", "Dec 2024"],
-			"Nebulance": [180, "Fanatic+, 6 months", "Dec 2024"],
-			"OldToonsWorld": [0, "3 months", "Dec 2024"],			
-			"Orpheus": [0, "Fanatic+, ANT activity proof", "Dec 2024"],
-			"ReelFliX": [0, "Seedsize>100GB", "Dec 2024"],
-			"RetroFlix": [0, "PU+", "Dec 2024"],
-			"Unwalled": [0, "3 months", "Dec 2024"]			
+			"Aither": [0, "PU+", "Apr 2025"],
+			"BakaBT": [0, "PU+, 3 months", "Apr 2025"],
+			"Cathode-Ray.Tube": [90, "PU+, 3 months, ratio>=1", "Apr 2025"],
+			"CinemaZ": [180, "Fanatic+, 50 uploads or 75 adoptions + 5 uploads, 1TiB upload, 6 months, ratio>=1.1", "Apr 2025"],
+			"LST": [90, "PU+, 3 months", "Apr 2025"],
+			"Nebulance": [90, "Fanatic+, 3 months", "Apr 2025"],
+			"OldToonsWorld": [0, "PU+, 3 months", "Apr 2025"],			
+			"Orpheus": [0, "Fanatic+", "Apr 2025"],
+			"ReelFliX": [0, "PU+", "Apr 2025"],
+			"RetroFlix": [0, "PU+", "Apr 2025"],
+			"Unwalled": [90, "3 months", "Apr 2025"]			
 		},
 		"AvistaZ": {
 			"CinemaZ": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"],
@@ -106,7 +107,7 @@ const data = {
 			"OldToonsWorld": [30, "BluExtremist or BluSeeder+", "Apr 2025"],
 			"PrivateSilverScreen": [90, "1TB real upload, 5 days seedtime,90 day + old account", "Apr 2025"],
 			"ReelFliX": [30, "BluExtremist or BluSeeder+", "Apr 2025"],
-			"Unwalled": [0, "5+ uploads", "Apr 2025"]		
+			"Unwalled": [0, "5 uploads", "Apr 2025"]		
 		},
 		"BroadcasTheNet": {
 			"Aither": [0, "No requirement", "Nov 2024"],
@@ -118,6 +119,7 @@ const data = {
 			"Beyond-HD": [247, "Guru", "Nov 2024"],
 			"Canal Street": [180, "6 months", "Nov 2024"],
 			"Concertos": [0, "No requirement", "Nov 2024"],
+			"FunFile": [0, "No requirement", "Nov 2024"],			
 			"GazelleGames": [90, "3 months", "Nov 2024"],
 			"HD-Forever": [180, "6 months", "Nov 2024"],
 			"iAnon": [365, "1 year", "Nov 2024"],
@@ -142,17 +144,14 @@ const data = {
 			"iAnon": [0, "", "Dec 2024"]
 		},
 		"Cinemageddon": {
-			"Aither": [0, "No requirement", "Jul 2024"],
-			"BroadCity": [60, "PU+, 2 months", "Jul 2024"],
-			"GreatPosterWall": [0, "PU+, 10 torrents", "Jul 2024"],
-			"JPTV.club": [0, "ratio>1", "Jul 2024"],
-			"MyAnonamouse": [0, "No requirement", "Jul 2024"],
-			"Orpheus": [180, "6 months, ratio>1.5", "Jul 2024"],
-			"SocietyGlitch": [0, "No requirement", "Jul 2024"],
-			"TeamHD": [0, "No requirement", "Jul 2024"],
-			"TheShow": [0, "No requirement", "Jul 2024"],
-			"TheGeeks": [0, "No requirement", "Jul 2024"],
-			"UHDBits": [360, "Superfan+, 12 months", "Jul 2024"]
+			"Aither": [180, "Superfan+, 6 months", "Mar 2025"],
+			"GreatPosterWall": [0, "PU+, 10 torrents", "Mar 2025"],
+			"MyAnonamouse": [0, "No requirement", "Apr 2025"],
+			"Orpheus": [180, "Superfan+, 6 months, ratio>1.5", "Mar 2025"],
+			"ReelFliX": [0, "No requirement", "Mar 2025"],
+			"SocietyGlitch": [0, "No requirement", "Mar 2025"],
+			"UHDBits": [360, "Superfan+, 12 months", "Mar 2025"],
+			"Unwalled": [0, "Superfan+, 5 seeded uploads", "Mar 2025"],
 		},
 		"CinemaZ": {
 			"AvistaZ": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"],
@@ -171,13 +170,22 @@ const data = {
 			"PornBay": [180, "Great Perv+, 6 months", "Mar 2025"],
 			"ReelFliX": [0, "No requirement", "Mar 2025"],
 			"SugoiMusic": [0, "Great Perv+", "Mar 2025"],
-			"Unwalled": [0, "No requirement", "Mar 2025"],
-			"UHDBits": [0, "Great Perv+", "Mar 2025"]
+			"UHDBits": [0, "Great Perv+", "Mar 2025"],
+			"Unwalled": [0, "No requirement", "Mar 2025"]
 		},
 		"ExoticaZ": {
 			"AvistaZ": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"],
 			"CinemaZ": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"],
 			"PrivateHD": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"]
+		},
+		"FearNoPeer": {
+			"LDU": [0, "No requiremenr", "Mar 2025"],
+			"LST": [120, "4 months, avg seed time >= 10 days", "Mar 2025"],
+			"OldToons World": [90, "Seeder, 3 months", "Mar 2025"],
+			"PrivateSilverScreen": [90, "1TB real upload, avg seed time >= 5 days, 90 days", "Mar 2025"],
+			"ReelFliX": [0, "No requirement", "Mar 2025"],
+			"RetroFlix": [0, "No requirement", "Mar 2025"],
+			"Upload.cx": [0, "SuperUser", "Mar 2025"],
 		},
 		"FileList": {
 			"Aither": [365, "Elite+, 1 year", "Jan 2025"],
@@ -187,40 +195,37 @@ const data = {
 			"MusicTorrents": [0, "VIP or Elite+", "Jan 2025"],
 			"Portugas": [0, "Ratio proofs from 2 trackers (FL included)", "Jan 2025"]
 		},
-		"FearNoPeer": {
-			"Upload.cx": [0, "SuperUser", "Mar 2025"],
-			"LDU": [0, "No requiremenr", "Mar 2025"],
-			"LST": [120, "4 months, avg seed time >= 10 days", "Mar 2025"],
-			"OldToons World": [90, "Seeder, 3 months", "Mar 2025"],
-			"PrivateSilverScreen": [90, "1TB real upload, avg seed time >= 5 days, 90 days", "Mar 2025"]
-		},
 		"GazelleGames": {
-			"Aither": [0, "No requirement", "Nov 2024"],
+			"Aither": [0, "No requirement", "Apr 2025"],
+			"AnimeBytes": [180, "Elite Gamer, 6 months", "Apr 2025"],
+			"Anthelion": [0, "No requirement", "Apr 2025"],
+			"BakaBT": [180, "6 months", "Apr 2025"],
+			"Beyond-HD": [730, "Master Gamer, 2 years, Legendary Invites forum", "Apr 2025"],
+			"Blutopia": [90, "3 months", "Apr 2025"],
 			"BroadcasTheNet": [365, "1 year old, Master Gamer, 10 uploads", "Mar 2025"],
-			"AnimeBytes": [180, "Elite Gamer, 6 months", "Nov 2024"],
-			"Anthelion": [0, "No requirement", "Nov 2024"],
-			"BakaBT": [180, "Pro Gamer+, 6 months", "Nov 2024"],
-			"Beyond-HD": [730, "Master Gamer, 2 years", "Jul 2024"],
-			"Blutopia": [90, "3 months", "Nov 2024"],
-			"Cathode-Ray.Tube": [0, "ratio>1.0", "Nov 2024"],
-			"CGPeers": [180, "Pro Gamer, 12 months, 2TB upload or Elite Gamer, 6 months, 2TB upload", "Nov 2024"],
-			"Dolphin Is Coming": [0, "10 music torrent uploads or 15 other torrent uploads", "Nov 2024"],
-			"Empornium": [180, "Pro Gamer, 6 months", "Nov 2024"],
-			"FunFile": [0, "No requirement", "Nov 2024"],
-			"iAnon": [180, "6 months", "Nov 2024"],
-			"LzTr": [180, "6 months", "Nov 2024"],
-			"MoreThanTV": [180, "Elite Gamer, ratio>1.5, 6 months", "Nov 2024"],
-			"MyAnonamouse": [0, "No requirement", "Nov 2024"],
+			"Canal Street": [365, "Pro Gamer, 1 year", "Mar 2025"],
+			"Cathode-Ray.Tube": [0, "ratio>1.0", "Apr 2025"],
+			"CGPeers": [180, "Pro Gamer, 12 months, 2TB upload or Elite Gamer, 6 months, 2TB upload", "Apr 2025"],
+			"Dolphin Is Coming": [0, "10 music torrent uploads or 15 other torrent uploads", "Apr 2025"],
+			"Empornium": [180, "6 months", "Apr 2025"],
+			"FunFile": [0, "No requirement", "Apr 2025"],
+			"LzTr": [180, "6 months", "Apr 2025"],
+			"MoreThanTV": [180, "Elite Gamer, ratio>1.5, 6 months", "Apr 2025"],
+			"MyAnonamouse": [0, "No requirement", "Apr 2025"],
 			"Nzbs.moe": [365, "Legendary Gamer, 1 year, Legendary Invites forum", "Nov 2024"],
 			"OpenCD": [180, "Elite Gamer, 6 months", "Nov 2024"],
-			"Orpheus": [0, "No requirement", "Nov 2024"],
-			"PassThePopcorn": [730, "Master Gamer, 250 uploads, 2 years", "Nov 2024"],
-			"PixelCove": [0, "No requirement", "Nov 2024"],
-			"PixelHD": [0, "3x 6 months old profile links (including GGn)", "Nov 2024"],
-			"PTerClub": [180, "6 months", "Nov 2024"],
-			"ReelFliX": [0, "Seedsize>100GB", "Nov 2024"],
-			"UHDBits": [0, "No requirement", "Nov 2024"],
-			"Unwalled Podcasts": [0, "Elite Gamer, 5 video game uploads", "Nov 2024"]
+			"Orpheus": [0, "No requirement", "Apr 2025"],
+			"PassThePopcorn": [730, "Master Gamer, 250 uploads, 2 years", "Apr 2025"],
+			"PixelCove": [0, "No requirement", "Apr 2025"],
+			"PixelHD": [0, "3x 6 months old profile links (including GGn)", "Apr 2025"],
+			"PTerClub": [180, "6 months", "Apr 2025"],
+			"ReelFliX": [0, "Seedsize>100GB", "Apr 2025"],
+			"UHDBits": [0, "No requirement", "Apr 2025"],
+			"Unwalled": [0, "Elite Gamer, 5 video game uploads", "Apr 2025"]
+		},
+		"Great Poster Wall": {
+			"M-Team": [60, "Elite+, 2 months", "Mar 2025"],
+			"PTerClub": [60, "Elite+, 2 months", "Mar 2025"]
 		},
 		"HDBits": {
 			"Aither": [0, "No requirement", "Nov 2024"],
@@ -252,9 +257,6 @@ const data = {
 		"iAnon": {
 			"Cathode-Ray.Tube": [0, "PU, Ratio >= 1.0", "May 2024"]
 		},
-		"JPTV.club": {
-			"AsianCinema": [180, "Power User, 6 months-old account", "Jul 2024"]
-		},
 		"Karagarga": {
 			"AsianCinema": [0, "No requirement", "Nov 2024"],
 			"Concertos": [0, "PU, 5 uploads", "Nov 2024"],
@@ -264,7 +266,7 @@ const data = {
 			"Unwalled Podcasts": [90, "PU, 3 months, 5 uploads", "Nov 2024"]
 		},
 		"LST": {
-			"Aither": [0, "Whale", "Nov 2024"],
+			"Aither": [0, "Whale", "Jul 2024"],
 			"Fappaizuri": [0, "Whale, 5TiB upload size", "Nov 2024"],
 			"Upload.cx": [0, "Whale", "Nov 2024"]
 		},
@@ -279,33 +281,31 @@ const data = {
 			"PixelCove": [0, "No requirement", "Jul 2024"],
 			"PornBay": [180, "6 months", "Jul 2024"],
 			"Portugas": [90, "3 months", "Jul 2024"],
-			"TeamHD": [0, "No requirement", "Oct 2024(inactive)"],
 			"UHDBits": [0, "No requirement", "Jul 2024"]
 		},
 		"MyAnonamouse": {
-			"ABTorrents": [0, "Some profile links and ratio proofs", "Mar 2025"],
-			"Aither": [90, "3 months", "Mar 2025"],
-			"Anthelion": [90, "3 months", "Mar 2025"],
-			"BakaBT": [180, "PU+, 6 months", "Mar 2025"],
-			"Bit-HDTV": [180, "6 months, ratio > 1", "Mar 2025"],
-			"Canal Street": [360, "12 months", "Mar 2025"],
-			"CGPeers": [360, "PU+, 12 months, ratio > 2, 500 GB Upload or VIP+, 6 months, ratio > 1, 1 TB Upload", "Mar 2025"],
-			"DigitalCore Club": [0, "No requirement", "Mar 2025"],
-			"iAnon": [360, "PU+, real ratio > 1.5, 12 months", "Mar 2025"],
-			"Immortal-s": [365, "3 1y+ old profile links", "Mar 2025"],
-			"LST": [0, "No requirement", "Mar 2025"],
-			"Milkie": [0, "No requirement", "Mar 2025"],
+			"ABTorrents": [0, "Some profile links and ratio proofs", "Apr 2025"],
+			"Aither": [90, "3 months", "Apr 2025"],
+			"Anthelion": [90, "3 months", "Apr 2025"],
+			"BakaBT": [180, "PU+, 6 months", "Apr 2025"],
+			"Bit-HDTV": [180, "6 months, ratio > 1", "Apr 2025"],
+			"Canal Street": [365, "PU+, 1 year", "Apr 2025"],
+			"CGPeers": [360, "PU+, 12 months, ratio > 2, 500 GB Upload or VIP+, 6 months, ratio > 1, 1 TB Upload", "Apr 2025"],
+			"DigitalCore Club": [0, "No requirement", "Apr 2025"],
+			"iAnon": [360, "PU+, real ratio > 1.5, 12 months", "Apr 2025"],
+			"Immortal-s": [0, "3 1y+ old profile links", "Apr 2025"],
+			"LST": [180, "PU+, 1TB upload, 6 months", "Apr 2025"],
+			"Milkie": [0, "No requirement", "Apr 2025"],
 			"OldToons World": [180, "6 months on MAM or other tracker, 500 GB uploaded, 1 TB downloaded, ratio > 1.25", "Mar 2025"],
-			"OnlyEncodes+": [90, "3 months", "Mar 2025"],
-			"Orpheus": [730, "2 Years", "Mar 2025"],
-			"PixelCove": [0, "No requirement", "Mar 2025"],
+			"Orpheus": [730, "2 Years", "Apr 2025"],
 			"PixelHD": [0, "Elite or high-level PU, 3x 6 months old profile links (including MAM)", "Mar 2025"],
 			"PrivateSilverScreen": [90, "3 months, 1TB upload", "Mar 2025"],
-			"ReelFliX": [0, "No requirement", "Mar 2025"],
+			"ReelFliX": [180, "PU+, 1TB upload, 6 months", "Mar 2025"],
+			"RocketHD": [180, "VIP+, 2TB upload, 6 months", "Mar 2025"],
 			"Secret Cinema": [180, "VIP+, 50 GB upload, 6 months", "Mar 2025"],
+			"Seedpool": [180, "PU+, 1TB upload, 6 months", "Mar 2025"],
 			"Shazbat": [180, "VIP+, 6 months", "Mar 2025"],
 			"TheEmpire": [0, "No requirement", "Mar 2025"],
-			"TheGeeks": [0, "2-3 profile links", "Mar 2025"],
 			"Unwalled": [0, "PU+, 25 seeded uploads", "Mar 2025"],
 			"XSpeeds": [180, "VIP+, ratio > 1, 6 months", "Mar 2025"]
 		},
@@ -317,13 +317,13 @@ const data = {
 			"GreatPosterWall": [56, "Flattop+ (8 weeks, 250 GB, 250 snatches, 250k bp)", "Mar 2025"],
 			"Orpheus": [90, "3 months", "May 2024"],
 			"PrivateHD": [224, "Raptor+ (32 weeks, 1 TB, 1000 snatches, 850k bp)", "Mar 2025"],
+			"ReelFliX": [224, "No requirement", "Mar 2025"],
 			"RetroFlix": [0, "No requirement", "Mar 2025"]
 		},
 		"Orpheus": {
 			"Anthelion": [0, "No requirements", "Sep 2024"],
 			"Aither": [90, "3 months", "Sep 2024"],
 			"Cathode-Ray.Tube": [0, "Ratio>1.0", "Sep 2024"],
-			"Concertos": [0, "No requirements", "Sep 2024"],
 			"GazelleGames": [90, "3 months", "Sep 2024"],
 			"iAnon": [365, "Ratio>1.05, 1 year", "Sep 2024"],
 			"LzTr": [180, "6 months", "Sep 2024"],
@@ -374,53 +374,47 @@ const data = {
 			"ExoticaZ": [120, "10k bp, Member Rank, 4 months, seeding 5 torrents, ratio>2.0, 300 GB", "Apr 2024"]
 		},
 		"Redacted": {
-			"Aither": [0, "No requirement", "Nov 2024"],
-			"AnimeBytes": [180, "PU, 12 months or Elite+, 6 months", "Nov 2024"],
-			"Anthelion": [0, "No requirement", "Nov 2024"],
-			"BakaBT": [180, "6 months", "Nov 2024"],
+			"Aither": [0, "No requirement", "Mar 2025"],
+			"AnimeBytes": [180, "PU, 12 months or Elite+, 6 months", "Mar 2025"],
+			"Anthelion": [0, "No requirement", "Mar 2025"],
+			"BakaBT": [180, "6 months", "Mar 2025"],
 			"Beyond-HD": [360, "Torrent Master, 12 months", "Mar 2025"],
-			"BroadcasTheNet": [365, "Torrent Master, 1 year", "Nov 2024"],
-			"CGPeers": [90, "PU+, 6 months, Ratio>2.0, 200GB Upload or Elite, 3 months, Ratio>1.0, 200GB+ Upload", "Nov 2024"],
-			"Concertos": [0, "No requirement", "Nov 2024"],
-			"Cryptichaven Comedy Club": [0, "No requirement", "Nov 2024"],
-			"D3Si": [360, "Elite, 12 months, Ratio>1.5, 100 Perfect CD FLACs torrents", "Nov 2024"],
-			"Dolphin Is Coming": [360, "PU, 12 months, 10 music torrents", "Nov 2024"],
-			"GazelleGames": [90, "3 months", "Nov 2024"],
-			"GreatPosterWall": [28, "4 weeks", "Nov 2024"],
-			"HDBits": [720, "Torrent Master+, 24 months, >=50% of uploads are music and fulfill at least 2 of the 4 following requirements: 1-Be seeding 500 GiB of MUSIC, 2-Be seeding 100% of your snatches, 3-Have 500 perfect FLACs (basically, Elite TM), 4-36 months on Redacted (RED)", "Nov 2024"],
-			"iAnon": [360, "ratio>0.65, 12 months", "Nov 2024"],
-			"Immortal-s": [0, "3 profile links and screens that are 1+ year old, the invite sent out accordingly", "Nov 2024"],
-			"LearnBits": [0, "1 profile link", "Nov 2024"],
-			"LzTr": [180, "6 months", "Nov 2024"],
-			"MyAnonamouse": [0, "No requirement", "Nov 2024"],
-			"Nzbs.moe": [365, "TM, 1 year", "Nov 2024"],
-			"Nebulance": [0, "No requirement", "Nov 2024"],
-			"Orpheus": [0, "No requirement", "Nov 2024"],
-			"PassThePopcorn": [720, "Torrent Master+, 24 months", "Nov 2024"],
-			"PixelHD": [0, "Elite+ or high-level PU, 3 profile links that are 6 months old", "Nov 2024"],
-			"RevolutionTT": [360, "12 months, 2 profile links and screens", "Nov 2024"],
-			"Secret Cinema": [180, "6 months", "Nov 2024"],
-			"SceneHD": [150, "5 months, at least 2 profile screens", "Nov 2024"],
-			"SugoiMusic": [0, "No requirement", "Nov 2024"],
-			"TheGeeks": [0, "3 tracker profiles (Redacted (RED) included) that are 6 months old and have >=1.05 real ratio and 60GB real upload", "Nov 2024"],
-			"TLFBits": [90, "3 months", "Nov 2024"],
-			"TorrentSeeds": [0, "12 months (if not, 1 profile screen that is 1+ year old)", "Nov 2024"],
-			"UHDBits": [0, "No requirement", "Nov 2024"]
+			"BroadcasTheNet": [365, "Torrent Master, 1 year", "Mar 2025"],
+			"CGPeers": [90, "PU+, 6 months, Ratio>2.0, 200GB Upload or Elite, 3 months, Ratio>1.0, 200GB+ Upload", "Mar 2025"],
+			"Concertos": [0, "No requirement", "Mar 2025"],
+			"D3Si": [360, "Elite, 12 months, Ratio>1.5, 100 Perfect CD FLACs torrents", "Mar 2025"],
+			"Dolphin Is Coming": [365, "1 year, 10 music torrents", "Mar 2025"],
+			"GazelleGames": [90, "3 months", "Mar 2025"],
+			"GreatPosterWall": [28, "4 weeks", "Mar 2025"],
+			"HDBits": [720, "Torrent Master+, 24 months, >=50% of uploads are music and fulfill at least 2 of the 4 following requirements: 1-Be seeding 500 GiB of MUSIC, 2-Be seeding 100% of your snatches, 3-Have 500 perfect FLACs (basically, Elite TM), 4-36 months on Redacted (RED)", "Mar 2025"],
+			"Immortal-s": [0, "3x 1 year old additional profile links", "Mar 2025"],
+			"LzTr": [180, "6 months", "Mar 2025"],
+			"MyAnonamouse": [0, "No requirement", "Mar 2025"],
+			"Orpheus": [0, "No requirement", "Mar 2025"],
+			"PassThePopcorn": [720, "Torrent Master+, 24 months", "Mar 2025"],
+			"PixelHD": [0, "Elite+ or high-level PU, 3 profile links that are 6 months old", "Mar 2025"],
+			"ReelFliX": [0, "No requirement", "Mar 2025"],
+			"Secret Cinema": [180, "6 months", "Mar 2025"],
+			"SceneHD": [180, "6 months, at least 2 profile screens", "Mar 2025"],
+			"SugoiMusic": [0, "No requirement", "Mar 2025"],
+			"TheGeeks": [0, "3 tracker profiles (Redacted (RED) included) that are 6 months old and have >=1.05 real ratio and 60GB real upload", "Mar 2025"],
+			"TLFBits": [90, "3 months", "Mar 2025"],
+			"TorrentSeeds": [0, "12 months (if not, 1 profile screen that is 1+ year old)", "Mar 2025"],
+			"UHDBits": [0, "No requirement", "Mar 2025"],
+			"Unwalled": [0, "No requirement", "Mar 2025"],
+			"Upload.cx": [0, "No requirement", "Mar 2025"]
 		},
 		"RetroFlix": {
 			"eShareNet": [0, "No requirement", "Jan 2024"],
 			"GreatPosterWall": [0, "upload 10+ non-music torrents or 5+ album torrents", "Jan 2024"],
-			"SpeedApp": [0, "No requirement", "Jan 2024"],
-			"TBDev": [0, "Unstated", "Unknown"]
+			"SpeedApp": [0, "No requirement", "Jan 2024"]
 		},
 		"TeamHD": {
-			"Cinemageddon": [360, "720p, 12 months", "Unknown"],
 			"Hares": [0, "PU+", "Feb 2023"],
 			"HD Dolby": [0, "1080i+", "Feb 2023"],
 			"HD-Space": [0, "1080i+", "Feb 2023"],
 			"HDCity": [0, "1080i+", "Feb 2023"],
 			"HDFans": [0, "PU+", "Feb 2023"],
-			"Immortal-s": [360, "3 profile links, 12 months", "Unknown"],
 			"LemonHD": [90, "1080i+, 3 months", "Feb 2023"],
 			"PTHome": [90, "1080i+, 3 months", "Feb 2023"],
 			"PTMSG": [360, "1080p, 12 months", "Feb 2023"],
@@ -429,21 +423,22 @@ const data = {
 			"UHDBits": [180, "1080p+, 6 months", "Feb 2023"]
 		},
 		"TheGeeks": {
-			"Immortal-s": [0, "3 1y+ old profile links", "Nov 2023"],
-			"MiM": [90, "PU+, 3 months, screenshots of digital magic library", "Nov 2023"],
-			"TheEmpire": [0, "No requirements", "Nov 2023"],
-			"TheVault": [90, "30 valuable forum posts or active IRC user, 3 months", "Unknown"],
-			"TorrentSeeds": [0, "No requirements", "Nov 2023"]
+			"Immortal-s": [0, "3 1y+ old profile links", "Nov 2024"],
+			"TheEmpire": [0, "No requirements", "Nov 2024"],
+			"ThePlace": [0, "PU", "Nov 2024"],
+			"TheVault": [90, "30 valuable forum posts or active IRC user, 3 months", "Nov 2024"],
+			"Unwalled": [0, "PU, 5 uploads", "Nov 2024"]
 		},
 		"TorrentSeeds": {
 			"iAnon": [365, "1 year", "Dec 2023"]
 		},
 		"TV-Vault": {
-			"AlphaRatio": [90, "3 months, ratio>1", "Feb 2023"],
-			"Cinemageddon": [0, "Unstated", "Feb 2023"],
-			"GreatPosterWall": [0, "PU+, 10 torrents", "Feb 2023"],
-			"MoreThanTV": [180, "Elite+, ratio>1.5, 6 months", "Feb 2023"],
-			"Orpheus": [0, "No requirement", "Feb 2023"]
+			"AlphaRatio": [90, "3 months, ratio>1", "Apr 2025"],
+			"Cinemageddon": [0, "Unstated", "Apr 2025"],
+			"GreatPosterWall": [0, "PU+, 10 torrents", "Apr 2025"],
+			"Oldtoons.world": [90, "3 months", "Apr 2025"],
+			"ReelFlix": [0, "Elite+", "Apr 2025"],
+			"Unwalled": [0, "Elite+", "Apr 2025"]
 		},
 		"UHDBits": {
 			"Aither": [120, "No requirement", "Mar 2025"],
@@ -453,6 +448,12 @@ const data = {
 			"Obscure": [0, "No requirement", "Mar 2025"],
 			"Orpheus": [0, "No requirement", "Mar 2025"],
 			"ReelFlix": [0, "100+ GB seed size", "Jul 2024"]
+		},
+		"Upload.cx": {
+			"FearNoPeer": [120, "PU+", "Apr 2025"],
+			"LST": [90, "PU+, 3 months", "Apr 2025"],
+			"PrivateSilverScreen": [90, "1TB real upload, avg seed time>=5 days, 90 days", "Apr 2025"],
+			"ReelFliX": [0, "No requirement", "Apr 2025"]
 		}
 	},
 	"unlockInviteClass": {
