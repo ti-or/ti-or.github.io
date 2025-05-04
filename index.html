@@ -4,7 +4,7 @@
   <script src="data.json"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrackersInfo Official Recruitments</title>
+  <title>TrackersInfo Route Planner</title>
   <style>
 
     html, body {
@@ -92,41 +92,15 @@
       background-color: #f5a623; 
       color: white;
       padding: 4px 8px; 
-       
       border-radius: 0; 
       font-weight: 500; 
       white-space: nowrap;
       flex-shrink: 0;
       font-size: 13px; 
     }
-
-    .route-time-display,
-    .route-changes-display {
-      display: inline-flex; 
-      align-items: center;
-      gap: 5px;
-      font-size: 13px; 
-      color: #333;
-    }
     
     .route-time-display {
       margin-left: 40%; 
-    }
- 
-    .route-label {
-      color: white;
-      padding: 3px 6px; 
-      font-size: 13px; 
-    }
-    
-    .time-label {
-      background-color: #d9534f; 
-      color: white; 
-    }
-
-    .changes-label {
-      background-color: #5f4b8b; 
-      color: white;
     }
  
     .route_header::after {
@@ -159,63 +133,6 @@
       color: var(--secondary-color);
     }
 
-    
-    @media (max-width: 720px) {
-      #headerTable {
-        height: auto;
-      }
-      
-      #detailsTable {
-        font-size: 12px;
-      }    
-    }
-
-    @media (max-width: 1600px) {
-      #calcForm {
-        padding: 15px;
-      }
-    }
-
-    .route-timeline {
-      position: relative;
-      padding: 20px;
-      background: white;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-    }
-
-    .route-summary {
-      padding: 8px 12px;
-      margin-bottom: 16px;
-      background: #f8f9fa;
-      border-radius: 4px;
-    }
-
-    .route-number {
-      background: #ff9500;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 3px;
-      margin-right: 12px;
-      font-size: 13px;
-    }
-
-    .route-time {
-      font-size: 14px;
-      margin-right: 16px;
-    }
-
-    .route-info-tag {
-      padding: 2px 6px;
-      font-size: 11px;
-    }
-
-    .timeline-container {
-      position: relative;
-      padding-left: 40px;
-      margin: 20px 0;
-    }
-
     .timeline-line {
       position: absolute;
       left: 50%;
@@ -234,160 +151,10 @@
       bottom: 0;
       height: 50%;
     }
-
-    .station-point {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: white;
-      border: 2px solid #009bbf;
-      z-index: 1;
-    }
-
-    .station-container {
-      position: relative;
-      padding: 12px 0;
-      margin-bottom: 12px;
-      min-height: 40px;
-    }
-
-    .station-time {
-      position: absolute;
-      left: -35px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #1a73e8;
-      font-weight: 500;
-      font-size: 14px;
-      white-space: nowrap;
-    }
-
-    .station-name {
-      margin-left: 30px;
-      font-size: 14px;
-      margin-bottom: 2px;
-      font-weight: 500;
-    }
-
-    .station-name-sub {
-      margin-left: 30px;
-      font-size: 12px;
-      color: #5f6368;
-    }
-
-    .route-segment {
-      padding: 8px 0;
-      margin-left: 30px;
-      position: relative;
-    }
-
-    .ticket-info {
-      background: #f8f9fa;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 13px;
-      color: #5f6368;
-      margin: 8px 0;
-    }
-    
-    .station-buttons {
-      display: none;
-    }
     
     .block.route:hover::before,
     .block.route:hover::after {
       display: none;
-    }
-    
-    .route_header::after {
-      display: none;
-    }
-    
-    #detailsTable::-webkit-scrollbar-button {
-      display: none;
-    }
-
-    .route_header {
-      padding: 12px;
-      background: #d2efff;
-      border-bottom: 1px solid #333;
-    }
-
-    .route_header .tbl {
-      display: table;
-      width: 100%;
-    }
-
-    .route_header .col {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    .route_header .col.number {
-      width: 80px;
-      text-align: center;
-    }
-
-    .route_header .col.number .label {
-      background: #ff9500;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 3px;
-      display: inline-block;
-    }
-
-    .route_header .col.number .label p {
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .route_header .col.wrapper {
-      padding: 0 12px;
-    }
-
-    .summary_1 .time {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .summary_2 {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .hyouka .label {
-      background: #e8f5e9;
-      color: #2e7d32;
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-size: 12px;
-    }
-
-    .tf {
-      display: flex;
-      gap: 16px;
-      color: #5f6368;
-      font-size: 13px;
-    }
-
-    .tf .label {
-      color: #5f6368;
-      margin-right: 4px;
-    }
-
-    .block_content.collapsed .dtl .row {
-      display: none;
-    }
-
-    .block_content.collapsed .dtl .row.sta.from,
-    .block_content.collapsed .dtl .row.sta.to {
-      display: flex;
     }
 
     .dtl .row {
@@ -455,19 +222,6 @@
       transform: translateX(-50%);
     }
 
-    .mark {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: white;
-      border: 2px solid #009bbf;
-      z-index: 1;
-    }
-
     .col.wrapper {
       display: table-cell;
       padding: 12px 16px;
@@ -503,13 +257,6 @@
 
     .trans_p {
       margin: 0;
-    }
-
-    .icn_tra {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      margin-right: 8px;
     }
     
     .row.sta {
@@ -680,43 +427,6 @@
       margin: 0 auto; 
       background: transparent; 
     }
-
-    .dtl .mark {
-      position: relative; 
-      width: 30px;
-      height: 30px;
-      margin: 5px auto; 
-      border-radius: 50%;
-      background-color: white;
-      border: 3px solid #F62E36; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      z-index: 2; 
-    }
-    .dtl .mark.line-mark {
-       background-color: #007bff; 
-       border: 3px solid #007bff; 
-       color: white;
-       width: 24px; 
-       height: 24px;
-       margin: 15px auto; 
-    }
-
-    .dtl .mark .inner {
-      text-align: center;
-    }
-    .dtl .mark .inner .icn_sta_alt { 
-      font-size: 11px;
-      font-weight: bold;
-      color: #F62E36; 
-    }
-    .dtl .mark.line-mark .inner .btn { 
-        font-size: 12px;
-        font-weight: bold;
-        color: white;
-    }
     
     .dtl .col.border::before {
       content: '';
@@ -788,23 +498,10 @@
       align-items: center;
       gap: 5px;
     }
-    .dtl .row.line .icn_tra_alt {
-       font-size: 16px;
-       font-weight: bold;
-       color: #007bff; 
-    }
 
     .dtl .row.line .pos {
       font-size: 12px;
       margin-top: 5px;
-    }
-    .dtl .lp_link {
-      color: #007bff;
-      text-decoration: none;
-      font-size: 12px;
-    }
-    .dtl .lp_link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
