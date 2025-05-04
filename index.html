@@ -59,94 +59,6 @@
       background: #f1f3f4;
     }
 
-    .trackerButton {
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      width: 60%;
-      height: 80%;
-      display: flex;
-      z-index: 900;
-      word-break: break-all;
-	  border: 1px solid #888;
-    }
-
-    .trackerButton:hover {
-      background: #f1f3f4;
-    }
-
-    #sourceAbbr, #targetAbbr {
-      position: absolute;
-      width: 100%;
-      font-size: 14px;
-      color: #5f6368;
-      bottom: 0;
-	  display: none;
-    }
-
-    #gridContainer {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
-      display: none;
-      max-height: 80vh;
-      overflow-y: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none; 
-    }
-
-    #gridContainer::-webkit-scrollbar {
-      display: none;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
-      padding-top: 40px;
-    }
-
-    .filter-input {
-      width: calc(90vw - 40px);
-      max-width: 920px;
-      padding: 12px 16px;
-      margin: 0;
-      border: 1px solid #dadce0;
-      border-radius: var(--border-radius);
-      background: white;
-      z-index: 10001;
-      box-shadow: var(--box-shadow);
-      font-size: 16px;
-      transition: all 0.2s ease;
-    }
-
-    .filter-input:focus {
-      border-color: var(--primary-color);
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(26,115,232,0.1);
-    }
-
-    .grid-item {
-      padding: 12px;
-      background: white;
-      color: var(--text-color);
-      border: 1px solid #dadce0;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-
-    .grid-item:hover {
-      background: #f1f3f4;
-      border-color: var(--primary-color);
-    }
-
     #detailsTable {
       display: flex;
       flex-direction: column;
@@ -168,20 +80,12 @@
     .route-header {
       padding: 8px 12px; 
       background-color: #d2efff; 
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #333;
       transition: background-color 0.2s ease;
       display: flex; 
       align-items: center; 
       gap: 10px; 
       font-size: 13px; 
-    }
-
-    .route-header:hover {
-      background-color: #e0e0e0;
-    }
-
-    .route-header.active {
-      background-color: #d2efff;  
     }
     
     .route-number-label {
@@ -196,7 +100,6 @@
       font-size: 13px; 
     }
 
-    
     .route-time-display,
     .route-changes-display {
       display: inline-flex; 
@@ -205,19 +108,16 @@
       font-size: 13px; 
       color: #333;
     }
-
     
     .route-time-display {
       margin-left: 40%; 
     }
-
-    
+ 
     .route-label {
       color: white;
       padding: 3px 6px; 
       font-size: 13px; 
     }
-
     
     .time-label {
       background-color: #d9534f; 
@@ -228,8 +128,7 @@
       background-color: #5f4b8b; 
       color: white;
     }
-
-    
+ 
     .route_header::after {
       display: none;
     }
@@ -239,108 +138,6 @@
       padding: 0;
       background: white;
     }
-
-    #routeTable {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-    }
-
-    #routeTable tr {
-      border-bottom: 1px solid #dadce0;
-    }
-
-    #routeTable tr:last-child {
-      border-bottom: none;
-    }
-
-    #routeTable td {
-      padding: 16px;
-      vertical-align: top;
-    }
-
-    #routeTable .route-header {
-      background: #d2efff;
-      font-weight: 500;
-      color: var(--text-color);
-    }
-
-    #routeTable .route-time {
-      color: var(--primary-color);
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    #routeTable .route-info {
-      color: #5f6368;
-      font-size: 14px;
-    }
-
-    #routeTable .route-requirements {
-      background: #f8f9fa;
-      padding: 12px;
-      border-radius: var(--border-radius);
-      margin-top: 8px;
-    }
-
-    #routeTable .route-activity {
-      color: #5f6368;
-      font-size: 13px;
-      margin-top: 8px;
-    }
-
-    #chainInfo {
-      margin: 16px auto 0;
-      width: 100%;
-      max-width: 1080px;
-      background: white;
-      padding: 16px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      font-size: 14px;
-      color: var(--text-color);
-    }
-
-    #chainInfo td {
-      padding: 8px 16px;
-    }
-
-    #chainInfo .route-number {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    #chainInfo .route-summary {
-      color: #5f6368;
-    }
-
-    
-    #routeChain {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px;
-      background: white;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      margin: 0 auto;
-      max-width: 1080px;
-    }
-
-    .route-step {
-      display: flex;
-      align-items: center;
-      margin: 0 8px;
-      color: var(--text-color);
-      font-weight: 500;
-    }
-
-    .route-step:not(:last-child)::after {
-      content: "→";
-      margin-left: 8px;
-      color: #5f6368;
-    }
-
     
     #update-time {
       position: fixed;
@@ -368,29 +165,9 @@
         height: auto;
       }
       
-      .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      }
-      
-      #gridContainer {
-        width: 95vw;
-      }
-      
       #detailsTable {
         font-size: 12px;
-      }
-      
-      #routeTable td {
-        padding: 12px;
-      }
-      
-      .route-step {
-        font-size: 14px;
-      }
-      
-      #chainInfo {
-        padding: 12px;
-      }
+      }    
     }
 
     @media (max-width: 1600px) {
@@ -516,26 +293,19 @@
       color: #5f6368;
       margin: 8px 0;
     }
-
     
     .station-buttons {
       display: none;
     }
-
-
-
-
     
     .block.route:hover::before,
     .block.route:hover::after {
       display: none;
     }
-
     
     .route_header::after {
       display: none;
     }
-
     
     #detailsTable::-webkit-scrollbar-button {
       display: none;
@@ -628,7 +398,7 @@
 
     .dtl .row .tbl {
       display: table;
-      width: 95%;
+      width: 100%;
     }
 
     .dtl .col.border {
@@ -636,6 +406,44 @@
       width: 10px;
       position: relative;
 	  border-right: 4px solid #009BBF;
+    }
+
+    .row.sta:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #009BBF;
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+    }
+
+    .row.sta.from:after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 50%;
+      background-color: #e5e5e5;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      z-index: 998;
+    }
+
+    .row.sta.to:after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 50%;
+      background-color: #e5e5e5;
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+      z-index: 998;
     }
 
     .border_top {
@@ -671,29 +479,22 @@
     }
 
     .col.header .time {
-      color: #1a73e8;
-      font-weight: 500;
+      color: #333;
+      font-weight: bold;
     }
 
     .name .lang_main {
+      color: #333;
       font-size: 16px;
-      margin-bottom: 2px;
-	  margin-top: 2px;
-	  margin-left: 20px;
-	  font-family: 'Noto Sans SC';
-	  font-weight: bold;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      margin-left: 20px;
+      font-family: 'Noto Sans SC';
     }
 
     .name .lang_sub {
       font-size: 12px;
       color: #5f6368;
-    }
-
-
-    .row.line .fare {
-      font-size: 13px;
-      color: #5f6368;
-      margin-bottom: 8px;
     }
 
     .row.trans {
@@ -710,38 +511,20 @@
       vertical-align: middle;
       margin-right: 8px;
     }
-
-    .arrow-indicator {
-      position: fixed;
-      pointer-events: none;
-      color: #009BBF;
-      font-size: 14px;
-      line-height: 1.2;
-      text-align: center;
-      z-index: 1000;
-      animation: arrowBlink 1s infinite;
-      display: none;
-    }
-
-    @keyframes arrowBlink {
-      0%, 100% { opacity: 0.6; }
-      50% { opacity: 1; }
-    }
-
     
+    .row.sta {
+      background: #e5e5e5;
+    }
+
     .row.sta, .row.line {
       width: 100%;
       box-sizing: border-box;
     }
-
     
     .inline-settings-container {
-       
       flex-wrap: wrap; 
       gap: 15px; 
-      background-color: #f8f9fa; 
-      border: 1px solid #e9ecef;
-      
+      background-color: #ffffff; 
       margin-top: 20px; 
       margin-bottom: 20px; 
       max-width: 800px; 
@@ -768,15 +551,11 @@
       padding: 6px 10px;
       font-size: 14px;
       font-weight: 500;
-      
     }
 
     .settings-options {
       background-color: white;
       padding: 10px;
-       
-      
-      
       flex-grow: 1;
       display: flex; 
       flex-wrap: wrap; 
@@ -784,25 +563,13 @@
       align-items: flex-start; 
     }
 
-    .settings-option-item {
-       
-       
-       
+    .settings-option-item { 
       margin-bottom: 0; 
       gap: 10px; 
       flex: 1 1 auto; 
       min-width: 140px; 
       display: flex; 
       flex-direction: column; 
-    }
-
-    .settings-option-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .settings-option-item label:first-child { 
-      font-weight: 500;
-      display: block;
     }
 
     .radio-options {
@@ -816,8 +583,7 @@
       align-items: center;
       gap: 4px; 
       font-size: 13px;
-      cursor: pointer;
-       
+      cursor: pointer;   
     }
     .radio-option input[type="radio"] {
       margin: 0;
@@ -828,35 +594,6 @@
     .settings-option-item input[type="number"],
     .settings-option-item select {
       display: none; 
-    }
-
-    
-    .station-selector-container,
-    .input-group,
-    .station-label,
-     
-    .input-icon-btn,
-    .swap-btn,
-    .inline-settings-container,
-    .settings-section,
-    .settings-header,
-    .settings-options,
-    .block.route,
-    .route-summary,
-    .route-number,
-    .tag,
-    .tag-complex,
-    .tag-complex .tag-label,
-    .tag-complex .tag-value,
-    .timeline-marker,
-    .pagination,
-    .page-btn,
-    #gridContainer, 
-
-    .grid-item, 
-    .filter-input 
-     {
-      border-radius: 0 !important; 
     }
 
     .pagination {
@@ -887,55 +624,11 @@
       cursor: not-allowed;
     }
 
-
-
-    
-    .current-selection-display {
-      display: none; 
-    }
-
-    
-    .station-selector-container {
-      display: none; 
-    }
-
-    
-    .input-station-wrapper {
-      display: flex;
-      flex-direction: column; 
-    }
-
-    
-    input.station-input {
-      padding: 8px 10px;
-      border: 1px solid #ccc;
-       
-      font-size: 14px;
-       
-      box-sizing: border-box;
-    }
-
-    
-    .station-abbr {
-      font-size: 12px;
-      color: #666;
-      text-align: left; 
-      margin-top: 3px;
-      min-height: 1em; 
-    }
-
-    
     #headerTable td.col2,
     #headerTable td.col4 {
       padding: 5px; 
       vertical-align: top; 
     }
-
-    
-    input.station-input::-webkit-calendar-picker-indicator {
-      display: none;
-    }
-
     
     .time-label {
       background-color: #d9534f; 
@@ -946,22 +639,17 @@
       background-color: #5f4b8b; 
       color: white; 
     }
-
     
     .route-label {
-      
       color: white; 
       padding: 2px 8px;
       font-size: 11px;
     }
-
     
     .dtl {
-      border: 1px solid #ccc;
-      background-color: #f8f9fa; 
-      padding: 0;
+      background-color: #ffffff; 
+      padding-top: 10px;
     }
-
     
     .dtl .row {
       position: relative;
@@ -978,7 +666,6 @@
       vertical-align: top; 
       padding: 5px;
     }
-
     
     .dtl .col.border {
       width: 10px; 
@@ -1030,8 +717,6 @@
         font-weight: bold;
         color: white;
     }
-
-
     
     .dtl .col.border::before {
       content: '';
@@ -1046,21 +731,11 @@
     }
     .dtl .row.sta.from .col.border::before { top: 50%; } 
     .dtl .row.sta.to .col.border::before { bottom: 50%; } 
-
-
     
     .dtl .col.wrapper {
       width: auto; 
       padding-left: 10px;
     }
-
-    
-    .dtl .col.header .time {
-      font-size: 16px;
-      color: #007bff; 
-      margin-bottom: 0;
-    }
-
 
     .dtl .col.content .name {
       margin-bottom: 5px;
@@ -1086,15 +761,12 @@
        font-weight: bold;
     }
 
-
     .dtl .col.link {
       width: 60px; 
       text-align: right;
       vertical-align: middle;
     }
 
-
-    
     .dtl .row.line .fare {
       border: 1px solid #5f4b8b; 
       border-radius: 15px; 
@@ -1107,7 +779,6 @@
     .dtl .row.line .fare p {
       margin: 2px 0;
     }
-
     
     .dtl .row.line .tra {
       font-size: 12px;
@@ -1188,10 +859,10 @@
               <label>Max Days</label>
               <div class="radio-options">
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="360" checked> 360
+                  <input type="radio" name="maxDays" value="360"> 360
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="720"> 720
+                  <input type="radio" name="maxDays" value="720" checked> 720
                 </label>
                 <label class="radio-option">
                   <input type="radio" name="maxDays" value="1080"> 1080
@@ -1228,13 +899,9 @@
   <script>
 
   window.addEventListener('load', function() {
-    const arrowIndicator = document.createElement('div');
-    arrowIndicator.className = 'arrow-indicator';
-    arrowIndicator.innerHTML = '▲<br>▼';
-    document.body.appendChild(arrowIndicator);
 
     const validMaxDaysValues = [360, 720, 1080, 1800];
-    const defaultMaxDays = 360;
+    const defaultMaxDays = 720;
     const validMaxJumpsValues = [1, 4, 9];
     const defaultMaxJumps = 4;
     const validSortOptionValues = ['fastest', 'fewestJumps'];
@@ -1242,14 +909,8 @@
 
     let activeRouteIndex = 0; 
     let maxJumps = defaultMaxJumps;
-    console.log(`Attempting to select maxJumps radio with value: "${maxJumps}"`);
-
     let maxDays = defaultMaxDays;
-    console.log(`Attempting to select maxDays radio with value: "${maxDays}"`);
-
     let sortOptionValue = defaultSortOption;
-     console.log(`Attempting to select sortOption radio with value: "${sortOptionValue}"`);
-
 
     const sourceInput = document.getElementById('source');
     const targetInput = document.getElementById('target');
@@ -1258,7 +919,7 @@
 
     function getLastUpdatedMonth() {
         let lastUpdated = "Loading...";
-        let latestDate = new Date(0); // Initialize with a very old date
+        let latestDate = new Date(0);
         for (const tracker in routeInfo) {
             for (const dest in routeInfo[tracker]) {
                 const dateString = routeInfo[tracker][dest][2];
@@ -1266,7 +927,7 @@
                     const parts = dateString.split(' ');
                     const month = parts[0];
                     const year = parseInt(parts[1]);
-                    const date = new Date(`${month} 01, ${year}`); // Create a Date object
+                    const date = new Date(`${month} 01, ${year}`);
 
                     if (!isNaN(date.getTime()) && date > latestDate) {
                         latestDate = date;
@@ -1294,11 +955,12 @@
 
         uniqueKeys.forEach(key => {
             const option = document.createElement('option');
+            option.textContent = abbrList[key] ? `(${abbrList[key]})` : key;
             option.value = key;
             sourceList.appendChild(option.cloneNode(true));
             targetList.appendChild(option);
-        });
-        console.log("Datalists populated.");
+           });
+           console.log("Datalists populated.");
     }
 
     function getMaxDays(start, end) {
@@ -1307,7 +969,7 @@
       return Math.max(days1, days2);
     }
 
-    function findAllRoutes(start, end, maxJumps = 5, maxDays = 1080) {
+    function findAllRoutes(start, end, maxJumps, maxDays) {
       const result = [];
       const stack = [[start, [start], 0]];
       while (stack.length) {
@@ -1373,10 +1035,9 @@
                       <div class="col header">
                            <div class="time">Day ${cumulativeDays}</div>
                         <div class="name">
-                          <p class="lang_main">${node}${abbrList[node] ? ` (${abbrList[node]})` : ''}</p>
+                          <p class="lang_main">${abbrList[node] ? `${node} (${abbrList[node]})` : node}</p>
                         </div>
                       </div>
-                         <div class="col content"></div>
                     </div>
                   </div>
                 </div>
@@ -1384,6 +1045,7 @@
             `;
 
             if (!isLast && routeInfo[node] && routeInfo[node][route[index + 1]]) {
+              const Node = route[index];
               const nextNode = route[index + 1];
               const [time, requirement, lastActivity] = routeInfo[node][nextNode];
                  const inviteReq = unlockInviteClass[node] ? unlockInviteClass[node][1] : 'N/A';
@@ -1397,7 +1059,7 @@
                       <div class="tbl">
                         <div class="col content">
                           <p class="tra">
-                               Jump to ${nextNode}
+                               From ${Node} to ${nextNode}
                           </p>
                         </div>
                         <div class="col aside">${getMaxDays(node, nextNode)} days</div>
