@@ -955,7 +955,7 @@
 
         uniqueKeys.forEach(key => {
             const option = document.createElement('option');
-            option.value = key + ' (' + abbrList[key] + ')';
+            option.value = abbrList[key] ? key + ' (' + abbrList[key] + ')' : key + ' (' + key + ')';
             sourceList.appendChild(option.cloneNode(true));
             targetList.appendChild(option);
            });
