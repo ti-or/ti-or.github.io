@@ -955,8 +955,7 @@
 
         uniqueKeys.forEach(key => {
             const option = document.createElement('option');
-            option.textContent = abbrList[key] ? `(${abbrList[key]})` : key;
-            option.value = key;
+            option.value = key + ' (' + abbrList[key] + ')';
             sourceList.appendChild(option.cloneNode(true));
             targetList.appendChild(option);
            });
@@ -1132,8 +1131,8 @@
       const resultDescription = document.getElementById('detailsTable');
       resultDescription.innerHTML = ''; 
 
-      const start = sourceInput.value.trim(); 
-      const end = targetInput.value.trim(); 
+      const start = sourceInput.value.trim().replace(/\s*\([^)]*\)/g, '');
+      const end = targetInput.value.trim().replace(/\s*\([^)]*\)/g, '');
       console.log(`Calculating route from "${start}" to "${end}"`);
 
       if (start === '' || end === '') {
