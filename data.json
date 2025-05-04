@@ -487,7 +487,7 @@ const data = {
 		"Cinemageddon": [14, "Superfan: 200GB upload, 20GB download, ratio>1.5"],
 		"Dolphin Is Coming": [14, "PU: 2 weeks, 5 torrents, 25GB upload, ratio>=1.05"],
 		"Empornium": [56, "Great Perv: 8 weeks, 100 GB upload, 5 torrents, ratio>1.05 or Sextreme Perv+: 13 weeks, 1 TB upload, 50 torrents, ratio>1.05"],
-		"FearNoPeer": [60, "SuperUser: 2 months, 5TiB upload, ratio>=0.8"],
+		"FearNoPeer": [30, "InsaneUser: 6 months, 50TB upload, or Seeder: 1 month, 5TB seedsize, average seedtime 30+ days"],
 		"FileList": [180, "Elite: 4 years, 4TB upload and ratio>5,00 or VIP: 3000 FLCoins"],
 		"GazelleGames": [30, "Pro Gamer: 1200 points & 30 days+ to access Invites forum. Legendary Gamer: 3000 points & 90 days+ to access Legendary Invites forum"],
 		"Great Poster Wall": [14, "PU: 2 weeks, 200GB download, 1 torrent, ratio>=1.2"],
