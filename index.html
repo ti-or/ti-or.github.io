@@ -557,16 +557,16 @@
               <label>Max Days</label>
               <div class="radio-options">
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="360"> 360
+                  <input type="radio" name="maxDays" value="365"> 1y
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="720" checked> 720
+                  <input type="radio" name="maxDays" value="730" checked> 2y
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="1080"> 1080
+                  <input type="radio" name="maxDays" value="1095"> 3y
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="maxDays" value="1800"> 1800
+                  <input type="radio" name="maxDays" value="1825"> 5y
                 </label>
               </div>
             </div>
@@ -598,8 +598,8 @@
 
   window.addEventListener('load', function() {
 
-    const validMaxDaysValues = [360, 720, 1080, 1800];
-    const defaultMaxDays = 720;
+    const validMaxDaysValues = [365, 730, 1095, 1825];
+    const defaultMaxDays = 730;
     const validMaxJumpsValues = [1, 4, 9];
     const defaultMaxJumps = 4;
     const validSortOptionValues = ['fastest', 'fewestJumps'];
@@ -827,11 +827,14 @@
 
     function calculateRoute() {
       const resultDescription = document.getElementById('detailsTable');
-      resultDescription.innerHTML = ''; 
+      resultDescription.innerHTML = '';
 
       const start = sourceInput.value.trim().replace(/\s*\([^)]*\)/g, '');
       const end = targetInput.value.trim().replace(/\s*\([^)]*\)/g, '');
+
       console.log(`Calculating route from "${start}" to "${end}"`);
+      const currentSortOption = document.querySelector('input[name="sortOption"]:checked').value;
+      console.log(`Sorting by: ${currentSortOption}`);
 
       if (start === '' && end === '') {
           resultDescription.innerHTML = '';
@@ -862,6 +865,26 @@
           return;
         }
 
+        if (currentSortOption === 'fastest') {
+            allRoutes.sort((routeA, routeB) => {
+                const daysA = calculateRouteTotalDays(routeA);
+                const daysB = calculateRouteTotalDays(routeB);
+                if (daysA !== daysB) {
+                    return daysA - daysB;
+                }
+                return routeA.length - routeB.length;
+            });
+        } else if (currentSortOption === 'fewestJumps') {
+            allRoutes.sort((routeA, routeB) => {
+                if (routeA.length !== routeB.length) {
+                    return routeA.length - routeB.length;
+                }
+                const daysA = calculateRouteTotalDays(routeA);
+                const daysB = calculateRouteTotalDays(routeB);
+                return daysA - daysB;
+            });
+        }
+
         activeRouteIndex = 0;
         showPage(allRoutes, 1, activeRouteIndex);
         return;
@@ -883,6 +906,26 @@
         if (allRoutes.length === 0) {
           resultDescription.innerHTML = '<div class="status-message">No results found</div>';
           return;
+        }
+
+        if (currentSortOption === 'fastest') {
+            allRoutes.sort((routeA, routeB) => {
+                const daysA = calculateRouteTotalDays(routeA);
+                const daysB = calculateRouteTotalDays(routeB);
+                if (daysA !== daysB) {
+                    return daysA - daysB;
+                }
+                return routeA.length - routeB.length;
+            });
+        } else if (currentSortOption === 'fewestJumps') {
+            allRoutes.sort((routeA, routeB) => {
+                if (routeA.length !== routeB.length) {
+                    return routeA.length - routeB.length;
+                }
+                const daysA = calculateRouteTotalDays(routeA);
+                const daysB = calculateRouteTotalDays(routeB);
+                return daysA - daysB;
+            });
         }
 
         activeRouteIndex = 0;
@@ -919,9 +962,6 @@
         return;
       }
       
-      const currentSortOption = document.querySelector('input[name="sortOption"]:checked').value;
-      console.log(`Sorting by: ${currentSortOption}`); 
-      
       if (currentSortOption === 'fastest') {
           allRoutes.sort((routeA, routeB) => {
               const daysA = calculateRouteTotalDays(routeA);
@@ -929,7 +969,7 @@
               if (daysA !== daysB) {
                   return daysA - daysB;
               }
-              return routeA.length - routeB.length; 
+              return routeA.length - routeB.length;
           });
       } else if (currentSortOption === 'fewestJumps') {
           allRoutes.sort((routeA, routeB) => {
@@ -995,7 +1035,6 @@
     });
 
     calculateRoute(); 
-
   });
   </script>
   <script data-goatcounter="https://98et5e.goatcounter.com/count"
