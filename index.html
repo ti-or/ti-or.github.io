@@ -503,6 +503,7 @@
       font-size: 12px;
       margin-top: 5px;
     }
+
   </style>
 </head>
 <body>
@@ -832,12 +833,61 @@
       const end = targetInput.value.trim().replace(/\s*\([^)]*\)/g, '');
       console.log(`Calculating route from "${start}" to "${end}"`);
 
-      if (start === '' || end === '') {
-          resultDescription.innerHTML = ''; 
+      if (start === '' && end === '') {
+          resultDescription.innerHTML = '';
           allRoutes = [];
           const pagination = resultDescription.querySelector('.pagination');
-          if (pagination) pagination.remove(); 
-          return; 
+          if (pagination) pagination.remove();
+          return;
+      }
+
+      if (start === '') {
+        // Only target is entered
+        const reachableTrackers = Object.entries(routeInfo)
+          .filter(([source, targets]) => targets && targets[end])
+          .map(([source, _]) => source);
+
+        if (reachableTrackers.length === 0) {
+          resultDescription.innerHTML = `<div class="status-message">No routes found to tracker "${end}".</div>`;
+          allRoutes = [];
+          const pagination = resultDescription.querySelector('.pagination');
+          if (pagination) pagination.remove();
+          return;
+        }
+
+        allRoutes = reachableTrackers.map(tracker => [tracker, end]);
+
+        if (allRoutes.length === 0) {
+          resultDescription.innerHTML = '<div class="status-message">No results found</div>';
+          return;
+        }
+
+        activeRouteIndex = 0;
+        showPage(allRoutes, 1, activeRouteIndex);
+        return;
+      }
+
+      if (end === '') {
+        // Only source is entered
+        const reachableTrackers = Object.keys(routeInfo[start] || {});
+        if (reachableTrackers.length === 0) {
+          resultDescription.innerHTML = `<div class="status-message">Tracker "${start}" not found or has no routes.</div>`;
+          allRoutes = [];
+          const pagination = resultDescription.querySelector('.pagination');
+          if (pagination) pagination.remove();
+          return;
+        }
+
+        allRoutes = reachableTrackers.map(tracker => [start, tracker]);
+
+        if (allRoutes.length === 0) {
+          resultDescription.innerHTML = '<div class="status-message">No results found</div>';
+          return;
+        }
+
+        activeRouteIndex = 0;
+        showPage(allRoutes, 1, activeRouteIndex);
+        return;
       }
       if (start === end) {
         resultDescription.innerHTML = '<div class="status-message">One account per lifetime!</div>';
