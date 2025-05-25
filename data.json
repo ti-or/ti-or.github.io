@@ -15,19 +15,16 @@ const data = {
 			"Unwalled": [0, "Harmonia+, 5 seeded uploads", "May 2025"]
 		},
 		"AlphaRatio": {
-			"Aither": [0, "Sphinx+, 1.0 > ratio", "Feb 2025"],
-			"Cathode-Ray.Tube": [0, "Sphinx+, 1.0 > ratio", "Feb 2025"],
-			"GazelleGames": [420, "Satyr/Adonis+ (12 TB, 2,400,000 bp, 60 weeks)", "Feb 2025"],
-			"iAnon": [365, "Sphinx+, 1+ Year Membership, 1.5 > ratio", "Feb 2025"],
-			"LzTr": [0, "Sphinx+", "Feb 2025"],
-			"MoreThanTV": [0, "Sphinx+, ratio>1.5", "Feb 2025"],
-			"Obscure": [0, "Sphinx+", "Feb 2025"],			
-			"Orpheus": [0, "Sphinx+", "Feb 2025"],
-			"PixelHD": [180, "Sphinx+, 6 months, 2 extra tracker proofs", "Feb 2025"],
-			"ReelFliX": [0, "Sphinx+, 6 months, 2 extra tracker proofs", "Feb 2025"],
-			"SceneHD": [360, "Sphinx+, 12 months, 1 scene torrent, 1 proof from another tracker", "Feb 2025"],
-			"TorrentSeeds": [0, "Sphinx+, 12 months or 1 proof from another tracker 12 months old", "Feb 2025"],
-			"UHDBits": [420, "Satyr/Adonis+ (12 TB, 2,400,000 bp, 60 weeks)", "Feb 2025"]
+			"Aither": [0, "Sphinx+, 1.0 > ratio", "May 2025"],
+			"Cathode-Ray.Tube": [0, "Sphinx+, 1.0 > ratio", "May 2025"],
+			"GazelleGames": [420, "Satyr/Adonis+ (12 TB, 2,400,000 bp, 60 weeks)", "May 2025"],
+			"LzTr": [0, "Sphinx+", "May 2025"],
+			"MoreThanTV": [0, "Sphinx+, ratio>1.5", "May 2025"],		
+			"Orpheus": [0, "Sphinx+", "May 2025"],
+			"PixelHD": [180, "Sphinx+, 6 months, 2 extra tracker proofs", "May 2025"],
+			"ReelFliX": [0, "Sphinx+, 6 months, 2 extra tracker proofs", "May 2025"],
+			"SceneHD": [360, "Sphinx+, 12 months, 1 scene torrent, 1 proof from another tracker", "May 2025"],
+			"UHDBits": [420, "Satyr/Adonis+ (12 TB, 2,400,000 bp, 60 weeks)", "May 2025"]
 		},
 		"AnimeBytes": {
 			"Aither": [90, "No requirement", "Nov 2024"],
@@ -81,10 +78,12 @@ const data = {
 			"Hawke-uno": [0, "Pro+", "Apr 2024"],
 			"Immortal-s": [360, "Pro+, 3 profile links, 12 months", "Apr 2024"],
 			"MoreThanTV": [0, "Pro+, ratio>1.5", "Apr 2024"],
+			"Oldtoons": [0, "Pro+, ≥1.3 ratio", "May 2024"],
 			"PassThePopcorn": [730, "King+, 100 uploads", "Apr 2024"],
 			"PixelHD": [0, "Pro+, 3 profile links", "Apr 2024"],
 			"Redacted": [0, "Pro+", "Apr 2024"],
 			"ReelFliX": [0, "Pro+", "Feb 2025"],
+			"Seedpool": [0, "Pro+", "May 2025"],
 			"SugoiMusic": [0, "Pro+", "Apr 2024"],
 			"Unwalled": [0, "Pro+", "Feb 2025"]
 		},
@@ -122,6 +121,7 @@ const data = {
 			"FunFile": [0, "No requirement", "Nov 2024"],			
 			"GazelleGames": [90, "3 months", "Nov 2024"],
 			"HD-Forever": [180, "6 months", "Nov 2024"],
+			"HDBits": [180, "Master, 2 years, seed size >2TB, avg seedtime>1500 hrs", "May 2025"],
 			"iAnon": [365, "1 year", "Nov 2024"],
 			"Immortal-s": [0, "3x 1 year old additional profile links", "Nov 2024"],
 			"Lat-Team": [0, "No requirement", "Nov 2024"],
@@ -145,7 +145,7 @@ const data = {
 		},
 		"Cinemageddon": {
 			"Aither": [180, "Superfan+, 6 months", "Mar 2025"],
-			"GreatPosterWall": [0, "PU+, 10 torrents", "Mar 2025"],
+			"Great Poster Wall": [0, "PU+, 10 torrents", "Mar 2025"],
 			"MyAnonamouse": [0, "No requirement", "Apr 2025"],
 			"Orpheus": [180, "Superfan+, 6 months, ratio>1.5", "Mar 2025"],
 			"ReelFliX": [0, "No requirement", "Mar 2025"],
@@ -201,7 +201,7 @@ const data = {
 			"BakaBT": [180, "6 months", "Apr 2025"],
 			"Beyond-HD": [730, "Master Gamer, 2 years, Legendary Invites forum", "Apr 2025"],
 			"Blutopia": [90, "3 months", "Apr 2025"],
-			"BroadcasTheNet": [365, "1 year old, Master Gamer, 10 uploads", "Mar 2025"],
+			"BroadcasTheNet": [730, "Master Gamer, 2 years,  250 uploads", "May 2025"],
 			"Canal Street": [365, "Pro Gamer, 1 year", "Mar 2025"],
 			"Cathode-Ray.Tube": [0, "ratio>1.0", "Apr 2025"],
 			"CGPeers": [180, "Pro Gamer, 12 months, 2TB upload or Elite Gamer, 6 months, 2TB upload", "Apr 2025"],
@@ -321,11 +321,16 @@ const data = {
 			"Anthelion": [0, "No requirement", "Mar 2025"],
 			"BakaBT": [90, "Ensign+, 3 months", "Mar 2025"],
 			"Cathode-Ray.Tube": [180, "6 months", "Mar 2025"],
-			"GreatPosterWall": [56, "Flattop+ (8 weeks, 250 GB, 250 snatches, 250k bp)", "Mar 2025"],
+			"Great Poster Wall": [56, "Flattop+ (8 weeks, 250 GB, 250 snatches, 250k bp)", "Mar 2025"],
 			"Orpheus": [90, "3 months", "May 2024"],
 			"PrivateHD": [224, "Raptor+ (32 weeks, 1 TB, 1000 snatches, 850k bp)", "Mar 2025"],
 			"ReelFliX": [224, "No requirement", "Mar 2025"],
 			"RetroFlix": [0, "No requirement", "Mar 2025"]
+		},
+		"OnlyEncodes+": {
+			"PrivateSilverScreen": [90, "1TB real upload, average seed time 5d+, 3 months", "May 2025"],
+			"LST": [90, "3 months", "May 2025"],
+			"ReelFlix": [0, "No requirement", "May 2025"]
 		},
 		"Orpheus": {
 			"Anthelion": [0, "No requirements", "Sep 2024"],
@@ -358,9 +363,10 @@ const data = {
 			"Empornium": [180, "6 months", "Nov 2024"],
 			"FunFile": [0, "No requirement", "Nov 2024"],
 			"GazelleGames": [90, "3 months", "Nov 2024"],
-			"GreatPosterWall": [90, "3 months", "Nov 2024"],
+			"Great Poster Wall": [90, "3 months", "Nov 2024"],
 			"HD-Forever": [180, "6 months", "Nov 2024"],
 			"HD-Only": [365, "1 year", "Nov 2024"],
+			"HDBits": [365, "TM, 1 year", "May 2025"],
 			"iAnon": [360, "12 months+, ratio>1.05", "Nov 2024"],
 			"Immortal-s": [0, "3x 1 year old additional profile links", "Nov 2024"],
 			"LzTr": [180, "6 months", "Nov 2024"],
@@ -400,7 +406,7 @@ const data = {
 			"D3Si": [360, "Elite, 12 months, Ratio>1.5, 100 Perfect CD FLACs torrents", "Mar 2025"],
 			"Dolphin Is Coming": [365, "1 year, 10 music torrents", "Mar 2025"],
 			"GazelleGames": [90, "3 months", "Mar 2025"],
-			"GreatPosterWall": [28, "4 weeks", "Mar 2025"],
+			"Great Poster Wall": [28, "4 weeks", "Mar 2025"],
 			"HDBits": [720, "Torrent Master+, 24 months, >=50% of uploads are music and fulfill at least 2 of the 4 following requirements: 1-Be seeding 500 GiB of MUSIC, 2-Be seeding 100% of your snatches, 3-Have 500 perfect FLACs (basically, Elite TM), 4-36 months on Redacted (RED)", "Mar 2025"],
 			"Immortal-s": [0, "3x 1 year old additional profile links", "Mar 2025"],
 			"LzTr": [180, "6 months", "Mar 2025"],
@@ -414,15 +420,21 @@ const data = {
 			"SugoiMusic": [0, "No requirement", "Mar 2025"],
 			"TheGeeks": [0, "3 tracker profiles (Redacted (RED) included) that are 6 months old and have >=1.05 real ratio and 60GB real upload", "Mar 2025"],
 			"TLFBits": [90, "3 months", "Mar 2025"],
-			"TorrentSeeds": [0, "12 months (if not, 1 profile screen that is 1+ year old)", "Mar 2025"],
 			"UHDBits": [0, "No requirement", "Mar 2025"],
 			"Unwalled": [0, "No requirement", "Mar 2025"],
 			"Upload.cx": [0, "No requirement", "Mar 2025"]
 		},
 		"RetroFlix": {
 			"eShareNet": [0, "No requirement", "Jan 2024"],
-			"GreatPosterWall": [0, "upload 10+ non-music torrents or 5+ album torrents", "Jan 2024"],
+			"Great Poster Wall": [0, "upload 10+ non-music torrents or 5+ album torrents", "Jan 2024"],
 			"SpeedApp": [0, "No requirement", "Jan 2024"]
+		},
+		"Seedpool": {
+			"PrivateSilverScreen": [90, "MasterPool+, 1TB Real Upload, avg seedtime >= 5 days, 90+ Days", "May 2025"],
+			"ReelFliX": [0, "MasterPool+", "May 2025"],
+			"Upload.cx": [0, "MasterPool+", "May 2025"],
+			"White Rabbit Network": [0, "MasterPool+", "May 2025"],
+			"YuScene": [0, "MasterPool+", "May 2025"]
 		},
 		"TeamHD": {
 			"Hares": [0, "PU+", "Feb 2023"],
@@ -444,13 +456,10 @@ const data = {
 			"TheVault": [90, "30 valuable forum posts or active IRC user, 3 months", "Nov 2024"],
 			"Unwalled": [0, "PU, 5 uploads", "Nov 2024"]
 		},
-		"TorrentSeeds": {
-			"iAnon": [365, "1 year", "Dec 2023"]
-		},
 		"TV-Vault": {
 			"AlphaRatio": [90, "3 months, ratio>1", "Apr 2025"],
 			"Cinemageddon": [0, "Unstated", "Apr 2025"],
-			"GreatPosterWall": [0, "PU+, 10 torrents", "Apr 2025"],
+			"Great Poster Wall": [0, "PU+, 10 torrents", "Apr 2025"],
 			"Oldtoons": [90, "3 months", "Apr 2025"],
 			"ReelFliX": [0, "Elite+", "Apr 2025"],
 			"Unwalled": [0, "Elite+", "Apr 2025"]
@@ -460,7 +469,6 @@ const data = {
 			"Dajiao PT": [0, "No requirement", "Mar 2025"],
 			"FileList": [180, "Extreme+, 6 months", "Mar 2025"],
 			"iAnon": [365, "Ratio>1.4, 1 year", "Mar 2025"],
-			"Obscure": [0, "No requirement", "Mar 2025"],
 			"Orpheus": [0, "No requirement", "Mar 2025"],
 			"ReelFliX": [0, "100+ GB seed size", "Jul 2024"]
 		},
@@ -501,6 +509,7 @@ const data = {
 		"MoreThanTV": [56, "Camera operator: 500GB upload, 8 weeks"],
 		"MyAnonamouse": [180, "PU: 6 months, 1 TiB upload, ratio>2"],
 		"Nebulance": [28, "Ensign: 4 weeks, 100GB upload, 100 snatches, 100k BP"],
+		"OnlyEncodes+": [60, "Trailblazer: 2 months, 5 TB upload, seedsize 100 GB, ratio >=0.4"],
 		"Orpheus": [28, "Elite: 4 weeks, 100GiB upload, 50 torrents, ratio>1.05"],
 		"PassThePopcorn": [28, "PU: 4 weeks, 80GB upload, 1 torrent, ratio>1.05"],
 		"PixelCove": [84, "PU: 12 weeks, 150GB upload, 1 torrent, ratio>1.25, 50 forum posts"],
@@ -553,7 +562,7 @@ const data = {
 		"FileList": "FL",
 		"FunFile": "FF",
 		"GazelleGames": "GGn",
-		"GreatPosterWall": "GPW",
+		"Great Poster Wall": "GPW",
 		"Hawke-uno": "HUNO",
 		"HD-Forever": "HDF",
 		"HD-Only": "HDO",
