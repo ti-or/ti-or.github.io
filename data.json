@@ -121,7 +121,7 @@ const data = {
 			"FunFile": [0, "No requirement", "Nov 2024"],			
 			"GazelleGames": [90, "3 months", "Nov 2024"],
 			"HD-Forever": [180, "6 months", "Nov 2024"],
-			"HDBits": [180, "Master, 2 years, seed size >2TB, avg seedtime>1500 hrs", "May 2025"],
+			"HDBits": [730, "Master, 2 years, seed size >2TB, avg seedtime>1500 hrs", "May 2025"],
 			"iAnon": [365, "1 year", "Nov 2024"],
 			"Immortal-s": [0, "3x 1 year old additional profile links", "Nov 2024"],
 			"Lat-Team": [0, "No requirement", "Nov 2024"],
