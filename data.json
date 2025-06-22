@@ -98,8 +98,8 @@ const data = {
 			"TheVault": [180, "6 months", "Nov 2024"]
 		},
 		"Blutopia": {
+			"BrokenStones": [0, "BluExtremist+ or BluSeeder+", "Jun 2025"],
 			"Concertos": [0, "BluCollector+,10 uploads", "Jun 2025"],
-			"Desitorrents": [30, "3 months", "Jun 2025"],
 			"Immortal-s": [0, "3x 1 year old additional profile links and screenshots", "Jun 2025"],
 			"LST": [30, "BluExtremist or BluSeeder+", "Jun 2025"],
 			"Oldtoons": [30, "BluExtremist or BluSeeder+", "Jun 2025"],
@@ -184,14 +184,6 @@ const data = {
 			"ReelFliX": [0, "SuperUser+", "Jun 2025"],
 			"RetroFlix": [0, "SuperUser+", "Jun 2025"],
 			"Upload.cx": [0, "SuperUser+", "Jun 2025"],
-		},
-		"FileList": {
-			"Aither": [365, "Elite+, 1 year", "Jan 2025"],
-			"Cathode-Ray.Tube": [360, "12 months, ratio>=1.0", "Jan 2025"],
-			"iAnon": [365, "Elite or higher, ratio=>1.4, 1 year", "Jan 2025"],
-			"Milkie": [0, "no requirements", "Jan 2025"],
-			"MusicTorrents": [0, "VIP or Elite+", "Jan 2025"],
-			"Portugas": [0, "Ratio proofs from 2 trackers (FL included)", "Jan 2025"]
 		},
 		"GazelleGames": {
 			"Aither": [0, "No requirement", "Apr 2025"],
