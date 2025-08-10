@@ -293,7 +293,7 @@ const data = {
 			"Milkie": [0, "No requirement", "Aug 2025"],
 			"Oldtoons": [180, "6 months on MAM or other tracker, 500 GB uploaded, 1 TB downloaded, ratio > 1.25", "Aug 2025"],
 			"Orpheus": [730, "2 Years", "Aug 2025"],
-			"Phoenix Project": [365 "PU+, 1 year, ratio>=1.51", "Aug 2025"],			
+			"Phoenix Project": [365, "PU+, 1 year, ratio>=1.51", "Aug 2025"],			
 			"PixelHD": [0, "Elite or high-level PU, 3x 6 months old profile links (including MAM)", "Aug 2025"],
 			"ReelFliX": [180, "PU+, 1TB upload, 6 months", "Aug 2025"],
 			"RocketHD": [180, "VIP+, 2TB upload, 6 months", "Aug 2025"],
@@ -611,4 +611,5 @@ const data = {
 		"XSpeeds": "XS"
 	}
 }
+
 
