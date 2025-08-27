@@ -638,7 +638,12 @@
 
     const sourceInput = document.getElementById('source');
     const targetInput = document.getElementById('target');
-    const { routeInfo, unlockInviteClass, abbrList } = data;
+	const { routeInfo, unlockInviteClass, abbrList } = data;
+	const uniqueKeys = Array.from(new Set(
+        Object.keys(routeInfo)
+          .flatMap(startKey => [startKey, ...Object.keys(routeInfo[startKey])])
+      )).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
     let allRoutes = [];
     let selectedSources = [];
     const selectedSourcesContainer = document.getElementById('selected-sources-container');
@@ -1032,7 +1037,7 @@
         const selectedValue = sourceInput.value.trim().replace(/\s*\([^)]*\)/g, '');
         console.log(`Change detected on sourceInput. Selected value: "${selectedValue}"`);
 
-        if (routeInfo[selectedValue] && !selectedSources.includes(selectedValue)) {
+        if (uniqueKeys.includes(selectedValue) && !selectedSources.includes(selectedValue)) {
             selectedSources.push(selectedValue);
             renderSelectedSources();
             sourceInput.value = '';
@@ -1068,3 +1073,4 @@
   async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
