@@ -638,7 +638,7 @@
 
     const sourceInput = document.getElementById('source');
     const targetInput = document.getElementById('target');
-	const { routeInfo, unlockInviteClass, abbrList } = data;
+    const { routeInfo, unlockInviteClass, abbrList } = data;
 	const uniqueKeys = Array.from(new Set(
         Object.keys(routeInfo)
           .flatMap(startKey => [startKey, ...Object.keys(routeInfo[startKey])])
@@ -1067,5 +1067,3 @@
   async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
-
-
