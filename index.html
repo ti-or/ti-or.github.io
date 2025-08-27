@@ -694,12 +694,6 @@
         sourceList.innerHTML = '';
         targetList.innerHTML = '';
 
-      const uniqueKeys = Array.from(new Set(
-        Object.keys(routeInfo)
-        .flatMap(startKey => [startKey, ...Object.keys(routeInfo[startKey])])
-      ))
-      .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
         uniqueKeys.forEach(key => {
             const option = document.createElement('option');
             option.value = abbrList[key] ? key + ' (' + abbrList[key] + ')' : key + ' (' + key + ')';
@@ -1073,4 +1067,5 @@
   async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
 
