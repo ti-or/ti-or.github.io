@@ -710,7 +710,7 @@
       return Math.max(days1, days2);
     }
 
-    function findAllRoutes(start, end, maxJumps, maxDays) {
+    function findAllRoutes(start, end, selectedSources, maxJumps, maxDays) {
       const result = [];
       const stack = [[start, [start], 0]];
       while (stack.length) {
@@ -721,6 +721,7 @@
           continue;
         }
         for (const [next, _] of Object.entries(routeInfo[node] || {})) {
+		  if (selectedSources.includes(next)) continue;
           const maxDaysToNext = getMaxDays(node, next);
           if (!route.includes(next) && (days + maxDaysToNext) <= maxDays) {
             stack.push([next, [...route, next], days + maxDaysToNext]);
@@ -947,7 +948,7 @@
                   console.log(`Target tracker "${target}" not found in routes for source "${source}".`);
                   return;
               }
-              const routesFromSource = findAllRoutes(source, target, maxJumps, maxDays);
+              const routesFromSource = findAllRoutes(source, target, selectedSources, maxJumps, maxDays);
               combinedRoutes = combinedRoutes.concat(routesFromSource);
           });
 
@@ -1068,3 +1069,4 @@
   async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
