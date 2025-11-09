@@ -453,8 +453,8 @@ const data = {
 		},
 		"UHDBits": {
 			"Aither": [120, "No requirement", "Sep 2025"],
-			"Anthelion": [0 "No requirement", "Sep 2025"],
-			"BrokenStones": [0 "No requirement", "Sep 2025"],
+			"Anthelion": [0, "No requirement", "Sep 2025"],
+			"BrokenStones": [0, "No requirement", "Sep 2025"],
 			"Dajiao PT": [0, "No requirement", "Sep 2025"],
 			"ReelFliX": [0, "100+ GB seed size", "Sep 2024"]
 		},
@@ -606,6 +606,7 @@ const data = {
 		"XSpeeds": "XS"
 	}
 }
+
 
 
 
