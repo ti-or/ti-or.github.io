@@ -31,11 +31,9 @@
     }
 
     #headerTable {
-      width: 60%;
+      width: 100%;
       max-width: 800px;
-      margin-left: 0;
-      margin-right: auto;
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto;
       border-collapse: collapse;
     }
 
@@ -114,12 +112,9 @@
     }
     
     #update-time {
-      position: fixed;
-      bottom: 0.5em;
-      right: 0.5em;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 5px;
-      z-index: 1000;
+      margin: 0;
+      background: transparent;
+      padding: 0;
     }
 
     a {
@@ -529,6 +524,14 @@
       color: #333;
     }
 
+    @media (max-width: 480px) {
+      #bottom-info-container {
+        flex-direction: column !important;
+        align-items: flex-end !important;
+      }
+      #bottom-info-container a { white-space: nowrap; }
+    }
+
   </style>
 </head>
 <body>
@@ -539,18 +542,26 @@
           <td class="col2" colspan="3" style="vertical-align: top; padding: 5px;"> 
             <div style="margin-bottom: 10px;">
               <label for="source" style="display: block; margin-bottom: 3px; font-size: 13px; color: #5f6368;">Source Tracker:</label>
-              <div style="position: relative;">
-                <input type="text" id="source" placeholder="Type or select source" autocomplete="off" list="source-list" style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; font-size: 14px;">
-                <button type="button" id="clear-source" style="position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 16px; color: #888;">×</button>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <div style="flex: 1;">
+                  <div id="source-token-wrapper" style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px;">
+                    <div id="selected-sources-container" style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap;"></div>
+                    <input type="text" id="source" placeholder="Type or select source , press DEL to clear" autocomplete="off" list="source-list" style="flex: 1; min-width: 120px; border: none; outline: none; font-size: 14px; padding: 6px; background: transparent;">
+                  </div>
+                </div>
+                <button type="button" id="clear-source" aria-label="Clear source" style="background: none; border: none; cursor: pointer; font-size: 18px; color: #888; padding: 8px 12px; min-width: 40px; border-radius: 6px;">×</button>
               </div>
               <datalist id="source-list"></datalist>
-              <div id="selected-sources-container" style="margin-top: 5px; display: flex; flex-wrap: wrap; gap: 5px;"></div>
             </div>
             <div>
                <label for="target" style="display: block; margin-bottom: 3px; font-size: 13px; color: #5f6368;">Target Tracker:</label>
-               <div style="position: relative;">
-                 <input type="text" id="target" placeholder="Type or select target" autocomplete="off" list="target-list" style="width: 90%; padding: 8px 10px; border: 1px solid #ccc; font-size: 14px;">
-                 <button type="button" id="clear-target" style="position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 16px; color: #888;">×</button>
+               <div style="display: flex; align-items: center; gap: 8px;">
+                 <div style="flex: 1;">
+                   <div id="target-token-wrapper" style="display: flex; align-items: center; flex-wrap: nowrap; gap: 6px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 6px 8px; border-radius: 4px;">
+                     <input type="text" id="target" placeholder="Type or select target , press DEL to clear" autocomplete="off" list="target-list" style="flex: 1; min-width: 120px; border: none; outline: none; font-size: 14px; padding: 6px; background: transparent;">
+                   </div>
+                 </div>
+                 <button type="button" id="clear-target" aria-label="Clear target" style="background: none; border: none; cursor: pointer; font-size: 18px; color: #888; padding: 8px 12px; min-width: 40px; border-radius: 6px;">×</button>
                </div>
                <datalist id="target-list"></datalist>
             </div>
@@ -615,11 +626,13 @@
       <div id="detailsTable"></div>
     </div>
   </form>
-      <div style="position: absolute; bottom: 0.5em; right: 0.5em; font-size: 13px; text-align: right; color: rgb(0, 0, 0); text-decoration: none;">
-      <p id="update-time" style="display: inline;">Last updated Loading...</p>
-      <a href="https://www.reddit.com/r/TrackersInfo/wiki/official_recruitments/">TrackersInfo</a>
-      <a href="https://github.com/ti-or/ti-or.github.io">GitHub</a>
-    </div>
+      <div id="bottom-info-container" style="position: fixed; bottom: 0.5em; right: 0.5em; display: flex; flex-direction: row; align-items: center; gap: 8px; font-size: 13px; z-index: 1000; background: rgba(255,255,255,0.95); padding: 6px 8px; border-radius: 6px; max-width: calc(100% - 2rem); box-sizing: border-box;">
+        <p id="update-time" style="margin: 0; white-space: nowrap; overflow-wrap: anywhere; flex: 0 0 auto;">Last updated Loading...</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; flex: 1 1 auto;">
+          <a href="https://www.reddit.com/r/TrackersInfo/wiki/official_recruitments/">TrackersInfo</a>
+          <a href="https://github.com/ti-or/ti-or.github.io">GitHub</a>
+        </div>
+      </div>
   <script>
 
   window.addEventListener('load', function() {
@@ -638,6 +651,47 @@
 
     const sourceInput = document.getElementById('source');
     const targetInput = document.getElementById('target');
+    const routeForm = document.getElementById('routeContainer');
+    if (routeForm) {
+      routeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+      });
+    }
+
+    targetInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        calculateRoute();
+      }
+      if (e.key === 'Delete') {
+        e.preventDefault();
+        targetInput.value = '';
+        calculateRoute();
+      }
+    });
+
+    sourceInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Delete') {
+        e.preventDefault();
+        sourceInput.value = '';
+        if (selectedSources.length > 0) {
+          selectedSources = [];
+          renderSelectedSources();
+          calculateRoute();
+        }
+        return;
+      }
+
+      if (e.key === 'Backspace' && sourceInput.value.trim() === '') {
+        e.preventDefault();
+        if (selectedSources.length > 0) {
+          selectedSources.pop();
+          renderSelectedSources();
+          calculateRoute();
+        }
+      }
+    });
+
     const { routeInfo, unlockInviteClass, abbrList } = data;
     let allRoutes = [];
     let selectedSources = [];
