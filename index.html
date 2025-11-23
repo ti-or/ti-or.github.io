@@ -526,10 +526,8 @@
 
     @media (max-width: 480px) {
       #bottom-info-container {
-        flex-direction: column !important;
-        align-items: flex-end !important;
+        display: none !important;
       }
-      #bottom-info-container a { white-space: nowrap; }
     }
 
   </style>
@@ -1083,19 +1081,26 @@
     });
     
     sourceInput.addEventListener('change', () => {
-        const selectedValue = sourceInput.value.trim().replace(/\s*\([^)]*\)/g, '');
-        console.log(`Change detected on sourceInput. Selected value: "${selectedValue}"`);
+      const selectedValue = sourceInput.value.trim().replace(/\s*\([^)]*\)/g, '');
+      console.log(`Change detected on sourceInput. Selected value: "${selectedValue}"`);
 
-        if (routeInfo[selectedValue] && !selectedSources.includes(selectedValue)) {
-            selectedSources.push(selectedValue);
-            renderSelectedSources();
-            sourceInput.value = '';
-            calculateRoute();
-        } else if (selectedValue === '') {
-        } else {
-            console.log(`Invalid or already selected source: "${selectedValue}"`);
-            sourceInput.value = '';
-        }
+      if (selectedValue === '') {
+        // nothing selected
+        sourceInput.value = '';
+        return;
+      }
+
+      if (selectedSources.includes(selectedValue)) {
+        // already selected, just clear the input
+        sourceInput.value = '';
+        return;
+      }
+
+      // Accept the selected value even if it's not a starting key in routeInfo
+      selectedSources.push(selectedValue);
+      renderSelectedSources();
+      sourceInput.value = '';
+      calculateRoute();
     });
 
     targetInput.addEventListener('change', () => {
