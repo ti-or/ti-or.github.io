@@ -656,10 +656,43 @@
       });
     }
 
+    // helper: find top datalist option matching current input
+    function getTopDatalistMatch(inputEl, datalistId) {
+      const list = document.getElementById(datalistId);
+      if (!list) return null;
+      const val = inputEl.value.trim().toLowerCase();
+      if (!val) return null;
+      for (const opt of list.options) {
+        if (!opt.value) continue;
+        const optVal = opt.value.toLowerCase();
+        if (optVal.startsWith(val)) return opt.value;
+      }
+      // fallback: return first option that contains the input
+      for (const opt of list.options) {
+        if (!opt.value) continue;
+        const optVal = opt.value.toLowerCase();
+        if (optVal.includes(val)) return opt.value;
+      }
+      return null;
+    }
+
     targetInput.addEventListener('keydown', (e) => {
+      if (e.isComposing) return; // ignore IME composition
       if (e.key === 'Enter') {
         e.preventDefault();
         calculateRoute();
+        return;
+      }
+      if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
+        // select top datalist suggestion for target
+        const match = getTopDatalistMatch(targetInput, 'target-list');
+        if (match) {
+          e.preventDefault();
+          const cleaned = match.replace(/\s*\([^)]*\)/g, '');
+          targetInput.value = cleaned;
+          calculateRoute();
+        }
+        return;
       }
       if (e.key === 'Delete') {
         e.preventDefault();
@@ -669,6 +702,26 @@
     });
 
     sourceInput.addEventListener('keydown', (e) => {
+      if (e.isComposing) return; // ignore IME composition
+
+      // Space selects top datalist suggestion for source
+      if (e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar') {
+        const match = getTopDatalistMatch(sourceInput, 'source-list');
+        if (match) {
+          e.preventDefault();
+          const cleaned = match.replace(/\s*\([^)]*\)/g, '');
+          if (!selectedSources.includes(cleaned)) {
+            selectedSources.push(cleaned);
+            renderSelectedSources();
+            sourceInput.value = '';
+            calculateRoute();
+          } else {
+            sourceInput.value = '';
+          }
+        }
+        return;
+      }
+
       if (e.key === 'Delete') {
         e.preventDefault();
         sourceInput.value = '';
