@@ -6,8 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TrackersInfo Route Planner</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Announcement modal styles */
+    #site-announcement-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    #site-announcement {
+      background: #fff;
+      color: #111;
+      max-width: 720px;
+      width: calc(100% - 40px);
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      padding: 20px 22px;
+      font-size: 15px;
+      line-height: 1.4;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #site-announcement h2 { margin: 0 0 8px 0; font-size: 18px; }
+    #site-announcement .announcement-actions { margin-top: 14px; display:flex; gap:8px; justify-content:flex-end; }
+    #site-announcement .btn { background:#0b69ff; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; font-weight:600; }
+    #site-announcement .btn.secondary { background: #eee; color:#111; }
+    #site-announcement .close-x { position:absolute; right:12px; top:10px; background:transparent; border:none; font-size:20px; cursor:pointer; }
+  </style>
 </head>
 <body>
+  <!-- Announcement modal -->
+  <div id="site-announcement-overlay" style="display:none">
+    <div id="site-announcement" role="dialog" aria-labelledby="site-announcement-title">
+      <button class="close-x" aria-label="Close announcement">×</button>
+      <h2 id="site-announcement-title">Notice</h2>
+      <div class="announcement-body">
+        <p>This repo was originally initiated to fill the gap left when the graph ceased maintenance. Now that a better alternative is available, there is no need to reinvent the wheel. I think it's best to leave this to the professionals. It's smarter and easier to use, which is why I think you'll love it: <a href="https://trackerpathways.org/" target="_blank" rel="noopener noreferrer">https://trackerpathways.org/</a></p>
+        <label style="display:flex; align-items:center; gap:8px; margin-top:10px; font-size:13px;">
+          <input type="checkbox" id="announcement-dontshow" />
+          <span>Don't show again</span>
+        </label>
+      </div>
+      <div class="announcement-actions">
+        <button class="btn secondary" id="announcement-close">Close</button>
+        <button class="btn" id="announcement-open">Open Link</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show announcement on page load and wire up controls
+    window.addEventListener('load', function() {
+      try {
+        var overlay = document.getElementById('site-announcement-overlay');
+        var closeBtn = document.getElementById('announcement-close');
+        var openBtn = document.getElementById('announcement-open');
+        var closeX = document.querySelector('#site-announcement .close-x');
+        var dontShowCheckbox = document.getElementById('announcement-dontshow');
+        var storageKey = 'siteAnnouncementDismissed_v1';
+
+        if (!overlay) return;
+
+        // If user previously dismissed, do not show
+        try {
+          if (window.localStorage && window.localStorage.getItem(storageKey) === '1') {
+            return; // do not show
+          }
+        } catch (e) {
+          // localStorage may be disabled, continue to show
+        }
+
+        // Show the modal
+        overlay.style.display = 'flex';
+
+        // Close handlers
+        function hide() {
+          // remember preference if checked
+          try {
+            if (dontShowCheckbox && dontShowCheckbox.checked && window.localStorage) {
+              window.localStorage.setItem(storageKey, '1');
+            }
+          } catch (e) {
+            // ignore storage errors
+          }
+          overlay.style.display = 'none';
+        }
+
+        closeBtn && closeBtn.addEventListener('click', hide);
+        closeX && closeX.addEventListener('click', hide);
+        overlay.addEventListener('click', function(e){ if (e.target === overlay) hide(); });
+
+        openBtn && openBtn.addEventListener('click', function(){
+          // If user has checked "don't show" and opens the link, still remember preference
+          try {
+            if (dontShowCheckbox && dontShowCheckbox.checked && window.localStorage) {
+              window.localStorage.setItem(storageKey, '1');
+            }
+          } catch (e) {}
+          window.open('https://trackerpathways.org/', '_blank', 'noopener');
+        });
+      } catch (err) {
+        console.warn('Announcement failed to initialize', err);
+      }
+    });
+  </script>
   <form id="routeContainer" style="display: block;">
     <div id="calcForm">
       <table id="headerTable">
