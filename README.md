@@ -1,2 +1,3 @@
-This repo was originally initiated to fill the gap left when the graph ceased maintenance. Now that a better alternative is available, there is no need to reinvent the wheel. I think it's best to leave this to the professionals. It's smarter and easier to use, which is why I think you'll love it:
-https://trackerpathways.org/
+invite.icu is no longer maintained.
+This repo was initiated to fill the gap left by 'the graph'. With the arrival of a better alternative, this repository is no longer necessary. I recommend deferring to the more professional solution provided by Tracker Pathways. It offers a smarter, more user-friendly experience. I think you'll love it:
+ https://trackerpathways.org/
