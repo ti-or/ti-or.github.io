@@ -445,7 +445,7 @@
         uniqueKeys.forEach(key => {
             const option = document.createElement('option');
             option.value = abbrList[key] ? key + ' (' + abbrList[key] + ')' : key + ' (' + key + ')';
-            sourceList.appendChild(option.cloneNode(true));
+            if (key in routeInfo) sourceList.appendChild(option.cloneNode(true));
             targetList.appendChild(option);
            });
            console.log("Datalists populated.");
@@ -822,3 +822,4 @@
   async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
